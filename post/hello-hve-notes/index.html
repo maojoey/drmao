@@ -97,28 +97,25 @@
 
         
           
-            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 
-<div id="gitalk-container"></div>
+          
+            <link rel="stylesheet" href="https://unpkg.com/disqusjs@1.1/dist/disqusjs.css">
+<script src="https://unpkg.com/disqusjs@1.1/dist/disqus.js"></script>
+
+<div id="disqus_thread"></div>
 
 <script>
 
-  var gitalk = new Gitalk({
-    clientID: '4dbbf497f197db06df59',
-    clientSecret: 'c31372468cd817eaf20223827efcee505f4af735',
-    repo: 'drmao',
-    owner: 'maojoey',
-    admin: ['maojoey'],
-    id: location.pathname,      // Ensure uniqueness and length less than 50
-    distractionFreeMode: false  // Facebook-like distraction free mode
-  })
-
-  gitalk.render('gitalk-container')
+var options = {
+  shortname: 'drmao',
+  apikey: 'jM96rFmpuCRShLBlkhPCZ9AEQrTUKINoH5XHF6PPxwBjqNTNXYrEKE08VMPCIx78',
+}
+if ('https://disqus.com/api/applications/5875029/') {
+  options.api = 'https://disqus.com/api/applications/5875029/'
+}
+var dsqjs = new DisqusJS(options)
 
 </script>
-
-          
 
           
         
